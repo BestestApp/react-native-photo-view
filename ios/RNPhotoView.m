@@ -412,8 +412,10 @@
     _minZoomScale = 1.0;
     _maxZoomScale = 5.0;
 
+    UIColor* const COLOR_LIGHT_BLUE = [[UIColor alloc] initWithRed:37.0f/255 green:50.0f/255  blue:59.0f/255 alpha:1];
+
     // Setup
-    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = COLOR_LIGHT_BLUE;
     self.delegate = self;
     self.decelerationRate = UIScrollViewDecelerationRateFast;
     self.showsVerticalScrollIndicator = YES;
@@ -423,12 +425,12 @@
     _tapView = [[MWTapDetectingView alloc] initWithFrame:self.bounds];
     _tapView.tapDelegate = self;
     _tapView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    _tapView.backgroundColor = [UIColor clearColor];
+    _tapView.backgroundColor = COLOR_LIGHT_BLUE;
     [self addSubview:_tapView];
 
     // Image view
     _photoImageView = [[MWTapDetectingImageView alloc] initWithFrame:self.bounds];
-    _photoImageView.backgroundColor = [UIColor clearColor];
+    _photoImageView.backgroundColor = COLOR_LIGHT_BLUE;
     _photoImageView.contentMode = UIViewContentModeCenter;
     _photoImageView.tapDelegate = self;
     [self addSubview:_photoImageView];
